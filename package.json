@@ -1,6 +1,7 @@
 {
   "name": "career-portfolio",
   "version": "1.0.0",
+  "homepage": "https://gmpro-cr.github.io/career-portfolio/",
   "description": "Personal career portfolio website for Gaurav Mahale",
   "main": "index.js",
   "scripts": {
