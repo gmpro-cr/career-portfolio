@@ -1,198 +1,215 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Gaurav Mahale - Career Portfolio</title>
-  <meta name="description" content="Career portfolio of Gaurav Mahale: banking, stressed assets, product management." />
+  <title>Gaurav Mahale • Professional Resume</title>
+  <meta name="description" content="Resume of Gaurav Mahale: Banking, Stressed Assets, Product & Credit Management." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root{--bg:#0b0f14;--panel:#121821;--muted:#8aa0b4;--text:#eaf2f9;--brand:#5cc8ff;--accent:#7affc6}
+    :root{
+      --bg:#f8fafc;           /* very light background */
+      --panel:#ffffff;        /* white panels */
+      --text:#0f172a;         /* deep slate text */
+      --muted:#475569;        /* slate */
+      --line:#e2e8f0;         /* light borders */
+      --brand:#2563eb;        /* blue primary */
+      --accent:#10b981;       /* green accent */
+      --chip:#eef2ff;         /* subtle brand tint */
+    }
     *{box-sizing:border-box}
-    html,body{margin:0;height:100%;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;}
-    a{color:var(--brand);text-decoration:none} a:hover{text-decoration:underline}
-    .container{max-width:1100px;margin:0 auto;padding:24px}
-    header.site{position:sticky;top:0;background:linear-gradient(180deg,var(--bg),rgba(11,15,20,.85));backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid rgba(255,255,255,.06);z-index:10}
-    .brand{display:flex;align-items:center;gap:14px}
-    .avatar{width:54px;height:54px;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--accent));display:grid;place-items:center;color:#001825;font-weight:800}
-    nav.top{display:flex;gap:18px;flex-wrap:wrap}
+    html,body{margin:0}
+    body{
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1080px;margin:0 auto;padding:28px 20px}
+
+    /* Header */
+    header.site{position:sticky;top:0;background:rgba(255,255,255,.85);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--line);z-index:10}
+    .brand{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .id{display:flex;align-items:center;gap:16px}
+    .avatar{width:60px;height:60px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,#dbeafe,#dcfce7);color:#064e3b;font-weight:800;border:1px solid var(--line)}
+    .name{font-size:24px;font-weight:700;margin:0}
+    .title{margin:2px 0 0;color:var(--muted);font-weight:500}
+    .contact{display:flex;gap:14px;flex-wrap:wrap;color:var(--muted);font-size:14px}
+
+    /* Layout */
     .grid{display:grid;gap:20px}
     @media(min-width:900px){.grid.two{grid-template-columns:2fr 1fr}}
-    section.card{background:linear-gradient(180deg,#151b24,rgba(21,27,36,.6));border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:22px}
-    h1{font-size:28px;margin:0 0 6px}
-    h2{font-size:20px;margin:0 0 12px;color:#d9e6f2}
-    h3{font-size:16px;margin:14px 0 6px}
+
+    /* Cards */
+    section.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:0 6px 24px rgba(15,23,42,.06)}
+    h2{font-size:18px;margin:0 0 12px 0;color:#111827}
+    h3{font-size:16px;margin:12px 0 6px}
     .muted{color:var(--muted)}
-    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(92,200,255,.14);color:#c7ecff;border:1px solid rgba(92,200,255,.35);margin:4px 6px 0 0;font-size:13px}
-    ul.clean{list-style:none;padding:0;margin:0}
-    .row{display:flex;gap:12px;align-items:flex-start;flex-wrap:wrap}
+    ul.clean{list-style:none;margin:0;padding:0}
+    .chip{display:inline-block;background:var(--chip);border:1px solid #c7d2fe;color:#1e40af;padding:6px 10px;border-radius:999px;margin:4px 6px 0 0;font-size:13px}
+    .row{display:flex;gap:10px;align-items:flex-start;flex-wrap:wrap}
     .kpi{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
-    .kpi div{background:#0f1520;border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:14px;text-align:center}
-    footer{padding:32px 0;color:var(--muted)}
-    .chip{display:inline-block;background:#0e1622;border:1px solid rgba(255,255,255,.08);padding:6px 10px;border-radius:10px;margin:4px 6px 0 0}
-    .timeline{border-left:2px solid rgba(255,255,255,.12);padding-left:14px}
-    .timeline .item{margin:14px 0}
+    .kpi div{background:#f1f5f9;border:1px solid var(--line);border-radius:12px;padding:14px;text-align:center}
+    footer{padding:28px 0;color:var(--muted);font-size:14px}
+    .time{color:#64748b;font-weight:500}
+    .pill{display:inline-block;border:1px solid var(--line);padding:2px 8px;border-radius:999px;font-size:12px;color:#334155;background:#f8fafc}
   </style>
 </head>
 <body>
   <header class="site">
-    <div class="container row" style="justify-content:space-between;align-items:center">
-      <div class="brand">
-        <div class="avatar">GM</div>
+    <div class="container brand">
+      <div class="id">
+        <div class="avatar" aria-hidden="true">GM</div>
         <div>
-          <div style="font-weight:700;letter-spacing:.2px">Gaurav Mahale</div>
-          <div class="muted" style="font-size:13px">Banking | Stressed Assets | Product Management</div>
+          <h1 class="name">Gaurav Mahale</h1>
+          <p class="title">Banking | Stressed Assets | Product & Credit Management</p>
         </div>
       </div>
-      <nav class="top muted">
-        <a href="#summary">Profile</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
-      </nav>
+      <div class="contact">
+        <span>📞 +91 99235 40336</span>
+        <span>✉️ mahalegauravk@gmail.com</span>
+        <span>📍 Pune, India</span>
+        <span class="pill">Open to opportunities</span>
+      </div>
     </div>
   </header>
 
-  <main class="container grid two" style="margin-top:18px">
-    <section id="summary" class="card" style="grid-column:1/-1">
-      <h1>Profile Summary</h1>
-      <p class="muted">Assistant Vice President with end‑to‑end experience across corporate banking, stressed asset management, and product management. Skilled at financial analysis, resolution planning under IBC/SARFAESI, cross‑functional collaboration, and tailoring products for emerging local corporates with turnover INR 250–1500 Cr.</p>
-      <div class="kpi">
-        <div><div style="font-size:22px;font-weight:700">500+ Cr</div><div class="muted" style="font-size:12px">AUM handled (multiple sectors)</div></div>
-        <div><div style="font-size:22px;font-weight:700">10+ yrs</div><div class="muted" style="font-size:12px">Cumulative relevant experience</div></div>
-        <div><div style="font-size:22px;font-weight:700">AVP</div><div class="muted" style="font-size:12px">Yes Bank Limited</div></div>
-      </div>
-    </section>
+  <main class="container grid two">
+    <!-- Left column -->
+    <div class="grid">
+      <section class="card">
+        <h2>Profile Summary</h2>
+        <p>Banking professional with 7+ years spanning corporate lending, stressed assets management, and product management across leading institutions including Yes Bank, HDFC Bank, and Suraksha ARC. Experienced in financial analysis, restructuring, legal frameworks (IBC, SARFAESI), and cross‑functional stakeholder management. Known for building data‑driven proposals, recovery strategies, and sector‑specific financial models in real estate, energy, and hospitality.</p>
+        <div class="kpi">
+          <div><strong>₹500 Cr+</strong><br><span class="muted">AUM handled</span></div>
+          <div><strong>10+ yrs</strong><br><span class="muted">Cumulative exp.</span></div>
+          <div><strong>AVP</strong><br><span class="muted">Current role</span></div>
+        </div>
+      </section>
 
-    <section id="experience" class="card">
-      <h2>Experience</h2>
-      <div class="timeline">
-        <div class="item">
-          <h3>Assistant Vice President — Emerging Local Corporates · Yes Bank Limited</h3>
-          <div class="muted">Apr 2022 – Present | Mumbai, India</div>
+      <section class="card">
+        <h2>Experience</h2>
+        <div>
+          <h3>Assistant Vice President – Emerging Local Corporates <span class="time">| Yes Bank</span></h3>
+          <p class="muted">Apr 2022 – Present</p>
           <ul class="clean">
-            <li>Develop and offer financial products tailored to corporates (turnover ₹250–1500 Cr).</li>
-            <li>Prepare CMA, WC and facility assessments; F/B & NFB proposals.</li>
-            <li>Collaborate with Credit, Legal, Trade/Forex to structure suitable solutions.</li>
-            <li>Identify and prioritize new market opportunities via internal and external networks.</li>
-            <li>Monitor client operations and project progress; portfolio health tracking.</li>
+            <li>Develop financial product proposals for corporates (₹250–1500 Cr turnover) including CMA, WC and facilities.</li>
+            <li>Coordinate with Credit, Legal, Trade and Forex to structure optimal offerings and mitigate risk.</li>
+            <li>Monitor portfolio performance and project progress; prepare WC/FBN/NFB/TL assessments.</li>
           </ul>
         </div>
-        <div class="item">
-          <h3>Stressed Asset Management — Yes Bank Limited</h3>
-          <div class="muted">Parallel responsibilities</div>
+        <div>
+          <h3>Manager – Product Management <span class="time">| HDFC Bank</span></h3>
+          <p class="muted">Jan 2020 – Apr 2022</p>
           <ul class="clean">
-            <li>Manage NPA corporate portfolio and maximize dues collection.</li>
-            <li>Build financial models to forecast and optimize recovery outcomes.</li>
-            <li>Work with legal/compliance on IBC, SARFAESI, debt restructuring frameworks.</li>
+            <li>Identified potential delinquency and executed resolution plans including restructuring and additional funding.</li>
+            <li>Built sector‑specific financial models for real estate, energy, and hotels; evaluated financing proposals.</li>
+            <li>Collaborated with business, credit, and recovery teams across Maharashtra & Goa.</li>
           </ul>
         </div>
-        <div class="item">
-          <h3>Manager — HDFC Bank Limited (Product Management)</h3>
-          <div class="muted">Jan 2020 – Apr 2022</div>
+        <div>
+          <h3>Operations Manager – Acquisition & Resolution of NPAs <span class="time">| Suraksha ARC</span></h3>
+          <p class="muted">Oct 2017 – Jan 2020</p>
           <ul class="clean">
-            <li>Identified potential delinquent cases and drove resolution to minimize default.</li>
-            <li>Formulated restructuring plans; assessed additional funding needs.</li>
-            <li>Analyzed financing proposals; prepared sector‑specific financials (real estate, energy, hotels).</li>
-            <li>Coordinated with business, credit and recovery teams across Maharashtra & Goa.</li>
+            <li>Analyzed NPA portfolios for acquisition; conducted due diligence and loan documentation (₹50 Cr+ tickets).</li>
+            <li>Monitored operations and KPIs across Real Estate and Wind/Power projects; valued security and cashflows.</li>
+            <li>Led financial due diligence in IBC processes; drafted resolution plan for Jaypee Infratech Limited (JIL).</li>
           </ul>
         </div>
-        <div class="item">
-          <h3>Operations Manager — Suraksha Asset Reconstruction Ltd.</h3>
-          <div class="muted">Oct 2017 – Jan 2020</div>
+        <div>
+          <h3>Consultant – Ministry of Water & Sanitation (Tata Trusts)</h3>
+          <p class="muted">May 2017 – Sep 2017</p>
           <ul class="clean">
-            <li>Analyzed financial health and recovery potential of NPA accounts considered for acquisition.</li>
-            <li>Managed due diligence, documentation; handled cases with ticket size > ₹50 Cr.</li>
-            <li>Monitored real estate, wind and power projects; total AUM > ₹500 Cr.</li>
-            <li>IBC: Financial due diligence for Jaypee Infratech Ltd.; drafted Resolution Plan and models.</li>
+            <li>Accelerated project execution; instituted MIS cadence with extension officers, BRCs/CRCs.</li>
+            <li>Helped Dhule district leap 8 positions in IHHL coverage within two months.</li>
+            <li>Initiated hand‑wash station program across 1200 schools with Rotary collaboration.</li>
           </ul>
         </div>
-        <div class="item">
-          <h3>Consultant — Tata Trusts / Ministry of Water & Sanitation</h3>
-          <div class="muted">May 2017 – Sep 2017</div>
+        <div>
+          <h3>Research & Operations – Summer Intern <span class="time">| Dexter Consultancy</span></h3>
+          <p class="muted">May 2016 – Jun 2016</p>
           <ul class="clean">
-            <li>Accelerated district sanitation program execution; reporting to ZP CEO and Ministry.</li>
-            <li>Set up extension officers/BRCs/CRCs systems to speed MIS updates.</li>
-            <li>Achievements: Within 2 months, Dhule rose 8 positions by IHHL count; initiated 1200 school hand‑wash stations with Rotary.</li>
+            <li>Conducted 100+ customer interviews for an e‑bike project; informed design selection.</li>
+            <li>Evaluated retail digitization opportunities; delivered viability analyses for two projects.</li>
           </ul>
         </div>
-        <div class="item">
-          <h3>Research & Operations Intern — Dexter Consultancy Pvt. Ltd.</h3>
-          <div class="muted">May 2016 – Jun 2016</div>
-          <ul class="clean">
-            <li>Interviewed 100 prospects for an e‑bike project leading to design selection.</li>
-            <li>Analyzed viability of two projects across Pune; recommended one for go‑ahead.</li>
-            <li>Interviewed 25 retail stores for online trading feasibility.</li>
-          </ul>
+      </section>
+
+      <section class="card">
+        <h2>Achievements</h2>
+        <ul class="clean">
+          <li>Consistently ranked Top 10 among 200 students from Grade 1 to 10.</li>
+          <li>Scored 147/150 in Mathematics in Class 10 Board Exam.</li>
+          <li>Moderated panel with senior leaders from Sun Pharma and Marico; hosted guest lecture by Senior President, Mankind Pharma.</li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- Right column -->
+    <aside class="grid">
+      <section class="card">
+        <h2>Contact</h2>
+        <ul class="clean">
+          <li><strong>Email:</strong> <a href="mailto:mahalegauravk@gmail.com">mahalegauravk@gmail.com</a></li>
+          <li><strong>Phone:</strong> +91 99235 40336</li>
+          <li><strong>Location:</strong> Pune, India</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Skills</h2>
+        <div>
+          <span class="chip">Corporate Lending</span>
+          <span class="chip">Stressed Assets</span>
+          <span class="chip">Financial Modelling</span>
+          <span class="chip">Credit Analysis</span>
+          <span class="chip">Restructuring</span>
+          <span class="chip">IBC & SARFAESI</span>
+          <span class="chip">Portfolio Monitoring</span>
+          <span class="chip">Due Diligence</span>
+          <span class="chip">Product Management</span>
+          <span class="chip">Stakeholder Management</span>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="skills" class="card">
-      <h2>Skills</h2>
-      <div>
-        <span class="badge">Financial Modeling</span>
-        <span class="badge">Credit Analysis</span>
-        <span class="badge">NPA/IBC/SARFAESI</span>
-        <span class="badge">Restructuring</span>
-        <span class="badge">Product Management</span>
-        <span class="badge">Corporate Banking</span>
-        <span class="badge">Due Diligence</span>
-        <span class="badge">Portfolio Monitoring</span>
-        <span class="badge">Stakeholder Management</span>
-      </div>
-    </section>
+      <section class="card">
+        <h2>Education</h2>
+        <ul class="clean">
+          <li>
+            <strong>PGDM</strong>, IIM Sirmaur — 2017
+          </li>
+          <li>
+            <strong>B.E. (ETC)</strong>, Smt. Kashibai Navale College of Engineering, Pune — 2015
+          </li>
+          <li>
+            Higher Secondary, S.P. College, Pune — 2010
+          </li>
+          <li>
+            High School, G.S. High School, Amalner, Jalgaon — 2008
+          </li>
+        </ul>
+      </section>
 
-    <section id="projects" class="card">
-      <h2>Projects / Academic Achievements</h2>
-      <ul class="clean">
-        <li>Valued Apollo Tyres via DCF forecasting; recommended BUY (undervalued).</li>
-        <li>Compared Dabur vs Marico using DuPont, EVA, P/B, P/E ratios.</li>
-        <li>Moderated panel with senior leaders from Sun Pharma and Marico; organized guest lecture with Senior President, Mankind Pharma (60 attendees).</li>
-        <li>Ranked within Top 10 out of 200 students consistently from 1st–10th standard; scored 147/150 in Mathematics (Class 10).</li>
-      </ul>
-    </section>
-
-    <section id="education" class="card">
-      <h2>Education</h2>
-      <ul class="clean">
-        <li><strong>PGDM</strong>, IIM Sirmaur — 2017 (CGPA 5.60)</li>
-        <li><strong>B.E. (ETC)</strong>, Smt. Kashibai Navale College of Engineering, Pune — 2015 (55%)</li>
-        <li><strong>Higher Secondary</strong>, S.P. College, Pune — 2010 (70%)</li>
-        <li><strong>High School</strong>, G.S. Highschool, Amalner, Jalgaon — 2008 (90%)</li>
-      </ul>
-    </section>
-
-    <section id="certifications" class="card">
-      <h2>Certifications</h2>
-      <ul class="clean">
-        <li>LinkedIn: Product Management</li>
-        <li>LinkedIn: Technical Product Management</li>
-      </ul>
-    </section>
-
-    <section id="contact" class="card">
-      <h2>Contact</h2>
-      <ul class="clean">
-        <li><strong>Email:</strong> mahalegauravk@gmail.com</li>
-        <li><strong>Phone:</strong> +91 9923540336</li>
-        <li><strong>Location:</strong> India</li>
-      </ul>
-      <div class="row" style="margin-top:8px">
-        <span class="chip">Open to: Corporate Banking</span>
-        <span class="chip">Stressed Assets</span>
-        <span class="chip">Product Roles</span>
-      </div>
-    </section>
+      <section class="card">
+        <h2>Certifications</h2>
+        <ul class="clean">
+          <li>LinkedIn Learning: Product Management</li>
+          <li>LinkedIn Learning: Technical Product Management</li>
+        </ul>
+      </section>
+    </aside>
   </main>
 
   <footer class="container">
-    © <span id="y"></span> Gaurav Mahale. Built as a lightweight static site.
+    © <span id="year"></span> Gaurav Mahale • Resume
   </footer>
-  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
